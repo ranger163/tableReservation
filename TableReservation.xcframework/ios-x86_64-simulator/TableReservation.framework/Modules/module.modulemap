@@ -1,0 +1,6 @@
+framework module TableReservation {
+    umbrella header "TableReservation.h"
+
+    export *
+    module * { export * }
+}
