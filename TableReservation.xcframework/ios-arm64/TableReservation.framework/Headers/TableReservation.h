@@ -2033,20 +2033,23 @@ __attribute__((swift_name("ReservationRatingEvents")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ReservationRatingEvents.GetVenuesForRating")))
 @interface TableReservationReservationRatingEventsGetVenuesForRating : TableReservationReservationRatingEvents
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)getVenuesForRating __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) TableReservationReservationRatingEventsGetVenuesForRating *shared __attribute__((swift_name("shared")));
+- (instancetype)initWithIsUserLoggedIn:(BOOL)isUserLoggedIn __attribute__((swift_name("init(isUserLoggedIn:)"))) __attribute__((objc_designated_initializer));
+- (TableReservationReservationRatingEventsGetVenuesForRating *)doCopyIsUserLoggedIn:(BOOL)isUserLoggedIn __attribute__((swift_name("doCopy(isUserLoggedIn:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL isUserLoggedIn __attribute__((swift_name("isUserLoggedIn")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ReservationRatingEvents.SubmitRating")))
 @interface TableReservationReservationRatingEventsSubmitRating : TableReservationReservationRatingEvents
-- (instancetype)initWithRequestBody:(TableReservationSubmitRatingPayload *)requestBody __attribute__((swift_name("init(requestBody:)"))) __attribute__((objc_designated_initializer));
-- (TableReservationReservationRatingEventsSubmitRating *)doCopyRequestBody:(TableReservationSubmitRatingPayload *)requestBody __attribute__((swift_name("doCopy(requestBody:)")));
+- (instancetype)initWithRequestBody:(TableReservationSubmitRatingPayload *)requestBody isUserLoggedIn:(BOOL)isUserLoggedIn __attribute__((swift_name("init(requestBody:isUserLoggedIn:)"))) __attribute__((objc_designated_initializer));
+- (TableReservationReservationRatingEventsSubmitRating *)doCopyRequestBody:(TableReservationSubmitRatingPayload *)requestBody isUserLoggedIn:(BOOL)isUserLoggedIn __attribute__((swift_name("doCopy(requestBody:isUserLoggedIn:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL isUserLoggedIn __attribute__((swift_name("isUserLoggedIn")));
 @property (readonly) TableReservationSubmitRatingPayload *requestBody __attribute__((swift_name("requestBody")));
 @end
 
